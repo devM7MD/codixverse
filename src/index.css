@@ -21,11 +21,6 @@ body {
     width: 100%;
 }
 
-/* Make all text white except code elements */
-* {
-    color: #ffffff !important;
-}
-
 /* Override white color for code syntax highlighting */
 .code-keyword {
     color: #569cd6 !important;

@@ -3,9 +3,9 @@ import React from 'react'
 function Services() {
   const services = [
     {
-      icon: 'fab fa-discord',
-      title: 'Discord Bots',
-      description: 'Custom Discord bots with advanced features, moderation tools, and engaging interactions'
+      icon: 'fas fa-mobile',
+      title: 'Mobile Apps',
+      description: 'Cross-platform mobile applications developed using Flutter for both iOS and Android'
     },
     {
       icon: 'fas fa-globe',
@@ -14,8 +14,8 @@ function Services() {
     },
     {
       icon: 'fas fa-desktop',
-      title: 'Electron Programs',
-      description: 'Cross-platform desktop applications using Electron for Windows, Mac, and Linux'
+      title: 'Desktop Applications',
+      description: 'Cross-platform desktop applications for Windows, Mac, and Linux'
     }
   ]
 
