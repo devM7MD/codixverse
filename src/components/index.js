@@ -7,4 +7,5 @@ export { default as Contact } from './Contact'
 export { default as Footer } from './Footer'
 export { default as LoadingScreen } from './LoadingScreen'
 export { default as ScrollToTopButton } from './ScrollToTopButton'
+export { default as ScrollProgress } from './ScrollProgress'
 

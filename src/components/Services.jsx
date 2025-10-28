@@ -1,6 +1,9 @@
 import React from 'react'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 function Services() {
+  const [sectionRef, isIntersecting] = useIntersectionObserver()
+  
   const services = [
     {
       icon: 'fas fa-mobile',
@@ -21,14 +24,14 @@ function Services() {
 
   return (
     <section id="services" className="services">
-      <div className="container">
-        <div className="section-header">
+      <div className="container" ref={sectionRef}>
+        <div className={`section-header ${isIntersecting ? 'fade-in' : ''}`}>
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">We provide a comprehensive range of development services</p>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className={`service-card ${isIntersecting ? 'fade-in' : ''}`} style={{ transitionDelay: `${index * 0.2}s` }}>
               <div className="service-icon">
                 <i className={service.icon}></i>
               </div>

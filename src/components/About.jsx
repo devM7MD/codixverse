@@ -1,10 +1,13 @@
 import React from 'react'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 function About() {
+  const [sectionRef, isIntersecting] = useIntersectionObserver()
+
   return (
     <section id="about" className="about">
-      <div className="container">
-        <div className="section-header">
+      <div className="container" ref={sectionRef}>
+        <div className={`section-header ${isIntersecting ? 'fade-in' : ''}`}>
           <h2 className="section-title">About Us</h2>
           <p className="section-subtitle">CodixVerse Team - Experience and Innovation in the World of Programming</p>
         </div>
@@ -22,15 +25,15 @@ function About() {
             </p>
           </div>
           <div className="about-stats">
-            <div className="stat-item">
+            <div className={`stat-item ${isIntersecting ? 'fade-in' : ''}`} style={{ animationDelay: '0.2s' }}>
               <div className="stat-number">50+</div>
               <div className="stat-label">Projects Completed</div>
             </div>
-            <div className="stat-item">
+            <div className={`stat-item ${isIntersecting ? 'fade-in' : ''}`} style={{ animationDelay: '0.4s' }}>
               <div className="stat-number">3+</div>
               <div className="stat-label">Years of Experience</div>
             </div>
-            <div className="stat-item">
+            <div className={`stat-item ${isIntersecting ? 'fade-in' : ''}`} style={{ animationDelay: '0.6s' }}>
               <div className="stat-number">100%</div>
               <div className="stat-label">Client Satisfaction</div>
             </div>

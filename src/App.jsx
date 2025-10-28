@@ -8,7 +8,8 @@ import {
   Contact, 
   Footer,
   LoadingScreen,
-  ScrollToTopButton
+  ScrollToTopButton,
+  ScrollProgress
 } from './components'
 import logoUrl from './assets/images/LOGO.png'
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       {loading && <LoadingScreen logoUrl={logoUrl} />}
+      <ScrollProgress />
       <Navbar logoUrl={logoUrl} />
       <Hero logoUrl={logoUrl} />
       <WaveDivider />

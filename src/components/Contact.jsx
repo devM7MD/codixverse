@@ -1,16 +1,19 @@
 import React from 'react'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 function Contact() {
+  const [sectionRef, isIntersecting] = useIntersectionObserver()
+  
   return (
     <section id="contact" className="contact">
-      <div className="container">
-        <div className="section-header">
+      <div className="container" ref={sectionRef}>
+        <div className={`section-header ${isIntersecting ? 'fade-in' : ''}`}>
           <h2 className="section-title">Contact Us</h2>
           <p className="section-subtitle">We're here to help you with your next project</p>
         </div>
         <div className="contact-content">
           <div className="contact-info">
-            <div className="contact-item">
+            <div className={`contact-item ${isIntersecting ? 'fade-in' : ''}`}>
               <div className="contact-icon">
                 <i className="fas fa-envelope"></i>
               </div>
