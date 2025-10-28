@@ -313,6 +313,7 @@ body {
 .hero {
 	display: flex;
 	align-items: center;
+	height: 100vh;
 	min-height: 900px;
 	background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #1a1a1a 100%);
 	position: relative;
@@ -333,7 +334,7 @@ body {
 .hero-container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 100px 20px 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 4rem;
@@ -1464,6 +1465,7 @@ section {
 		grid-template-columns: 1fr;
 		text-align: center;
 		gap: 2rem;
+		padding: 80px 20px 20px;
 	}
 
 	.hero-title {
